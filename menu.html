@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Cake Shop — Products</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<style>
+:root{--pink:#ff6f91;--rose:#ff8fab;--cream:#fff5f7;--choc:#6e3c3c;--shadow:0 12px 28px rgba(0,0,0,.08);}
+body{font-family:"Poppins",system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(#fff,#fff9fb 40%, #ffeef3)}
+.navbar{background:linear-gradient(90deg,var(--pink),var(--rose)); box-shadow:var(--shadow)}
+.navbar .nav-link,.navbar .navbar-brand{color:#fff!important; font-weight:600}
+.navbar .nav-link:hover{background-color: black;}
+.hero-mini{padding:70px 0; text-align:center; color:#5b2f2f; background:linear-gradient(180deg,#ffe9f1,#fff)}
+.card-cake{border:0; border-radius:18px; overflow:hidden; box-shadow:var(--shadow); transition:transform .25s ease}
+.card-cake:hover{transform:translateY(-6px)}
+.card-cake img{height:200px; object-fit:cover}
+.badge-pill{background:#ffe0e7; color:#7a4a4a; border-radius:999px; padding:6px 12px; font-weight:600}
+.price{color:var(--pink); font-weight:800;}
+footer{background:#3a2323; color:#fbeff1}
+footer a{ text-decoration: none; color:#ffd7df}
+footer a:hover{text-decoration:underline}
+@media (max-width:991.98px){ .card-cake img{height:190px}}
+@media (max-width:575.98px){ .card-cake{border-radius:14px} }
+
+
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">The Cake Shop</a>
+    <button class="navbar-toggler bg-light-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-semibold" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-mini">
+  <div class="container" data-aos="fade-up">
+    <h1 class="fw-bold">Our Menu</h1>
+    <p class="mb-0">Cakes • Cupcakes • Cheesecakes • Brownies • Cookies</p>
+  </div>
+</header>
+
+<main class="container py-5">
+  <div class="row g-4">
+    <!-- Repeatable product cards -->
+    <div class="col-sm-6 col-lg-4" data-aos="fade-up">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Red Velvet.jpg" class="w-100" alt="Red Velvet">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Red Velvet</h5><span class="badge-pill">1/2 kg</span>
+          </div>
+          <p class="small text-muted mb-2">Cream cheese frosting, tender crumb.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹599</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Classic Cheesecake.jpg" class="w-100" alt="Classic Cheesecake">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Classic Cheesecake</h5><span class="badge-pill">Slice</span>
+          </div>
+          <p class="small text-muted mb-2">Silky baked cheesecake, biscuit base.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹249</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Cupcake Assortment.jpg" class="w-100" alt="Cupcake Assortment">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Cupcake Assortment</h5><span class="badge-pill">Box of 6</span>
+          </div>
+          <p class="small text-muted mb-2">Vanilla, choco, berry swirls.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹399</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Chocolate Cake.jpg" class="w-100" alt="Chocolate Cake">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Chocolate Cake</h5><span class="badge-pill">1/2 kg</span>
+          </div>
+          <p class="small text-muted mb-2">Rich chocolate layers, creamy frosting.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹399</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Pound Cake.jpg" class="w-100" alt="Pound Cake">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Pound Cake</h5><span class="badge-pill">1/2 kg</span>
+          </div>
+          <p class="small text-muted mb-2">Dense, buttery, and rich.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹399</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Butterscotch Cake.jpg" class="w-100" alt="Butterscotch Cake">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Butterscotch Cake</h5><span class="badge-pill">1/2 kg</span>
+          </div>
+          <p class="small text-muted mb-2">Butterscotch layers, caramel drizzle.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹399</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Tiramisu Cake.jpg" class="w-100" alt="Tiramisu cake">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Tiramisu Cake</h5><span class="badge-pill">Slice</span>
+          </div>
+          <p class="small text-muted mb-2">Coffee-soaked layers, mascarpone cream.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹150</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Angel Food Cake.jpg" class="w-100" alt="Angel food cake">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Angel food cake</h5><span class="badge-pill">1/2 kg</span>
+          </div>
+          <p class="small text-muted mb-2">Vanilla, Strawberry, berry swirls.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹399</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Ice Cream Cake.jpg" class="w-100" alt="Ice Cream cake">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Ice Cream cake</h5><span class="badge-pill">1/2 kg</span>
+          </div>
+          <p class="small text-muted mb-2">Ice cream layers, chocolate ganache.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹399</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Fruit Cake.jpg" class="w-100" alt="Fruit cake">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Fruit cake</h5><span class="badge-pill">Box of 6</span>
+          </div>
+          <p class="small text-muted mb-2">Mixed fruit layers, creamy frosting.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹235</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Coffee Cake.jpg" class="w-100" alt="Coffee cake">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Coffee cake</h5><span class="badge-pill">Slice</span>
+          </div>
+          <p class="small text-muted mb-2">Coffee-flavored layers, creamy frosting.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹127</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Pineapple Cake.jpg" class="w-100" alt="Pineapple cake">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Pineapple cake</h5><span class="badge-pill">1/2 kg</span>
+          </div>
+          <p class="small text-muted mb-2">Pineapple-flavored layers, creamy frosting.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹359</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Blondies.jpg" class="w-100" alt="Blondies">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Blondies</h5><span class="badge-pill">Box of 12</span>
+          </div>
+          <p class="small text-muted mb-2">Butterscotch-flavored layers, creamy frosting.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹299</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Gingerbread Brownies.jpg" class="w-100" alt="Gingerbread brownies">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Gingerbread brownies</h5><span class="badge-pill">Box of 12</span>
+          </div>
+          <p class="small text-muted mb-2">Gingerbread-flavored layers, creamy frosting.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹359</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Cheesecake brownies.jpg" class="w-100" alt="Cheesecake brownies">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Cheesecake brownies</h5><span class="badge-pill">Box of 12</span>
+          </div>
+          <p class="small text-muted mb-2">Cheesecake-flavored layers, chocolate frosting.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹359</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Coconut cookies.jpg" class="w-100" alt="Coconut cookies">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Coconut cookies</h5><span class="badge-pill">1/2 kg</span>
+          </div>
+          <p class="small text-muted mb-2">Coconut-flavored layers, coconut frosting.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹359</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/Pistachio and cranberry cookies.jpg" class="w-100" alt="Pistachio and cranberry cookies">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">Pistachio and cranberry cookies</h5><span class="badge-pill">1/2 kg</span>
+          </div>
+          <p class="small text-muted mb-2">Pistachio-flavored layers, cranberry frosting.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹359</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-cake h-100">
+        <img src="Assets/photos/White chocolate & pretzel cookies.jpg" class="w-100" alt="White chocolate & pretzel cookies">
+        <div class="p-3">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <h5 class="mb-0">White chocolate & pretzel cookies</h5><span class="badge-pill">1/2 kg</span>
+          </div>
+          <p class="small text-muted mb-2">White chocolate-flavored layers, pretzel frosting.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹359</span>
+            <a href="cart.html" class="btn btn-sm btn-outline-danger">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more as needed… -->
+  </div>
+</main>
+
+<footer class="pt-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h5 class="text-white">The Cake Shop</h5>
+        <p class="mb-2">Small-batch cakes, crafted daily with real butter & love.</p>
+        <p class="small mb-0">Open: Mon–Sun, 9 AM – 9 PM</p>
+      </div>
+     <div class="col-6 col-md-2">
+        <h6 class="text-white">Links</h6>
+        <ul class="list-unstyled mb-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="cart.html">Your Cart</a></li>
+          <li><a href="login.html">Account</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-3">
+        <h6 class="text-white">Visit</h6>
+        <p class="mb-1">89, Patti Street, Sivakasi City</p>
+        <p class="mb-1">+91 9500781257</p>
+        <p class="mb-0">abisheikj2703@gmail.com</p>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-white">Subscribe</h6>
+        <form class="d-flex gap-2">
+          <input type="email" class="form-control form-control-sm" placeholder="Your email">
+          <button class="btn btn-sm btn-light">Join</button>
+        </form>
+      </div>
+    </div>
+    <hr class="border-light-subtle mt-4"/>
+    <p class="text-center small mb-0">© 2025 The Cake Shop Cake Shop · All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration:900, once:true});</script>
+</body>
+</html>

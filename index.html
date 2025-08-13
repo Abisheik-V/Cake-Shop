@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Cake Shop — Home</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<style>
+:root{
+  --pink:#ff6f91; --rose:#ff8fab; --cream:#fff5f7; --choc:#6e3c3c; --gold:#ffcf6d;
+  --shadow:0 12px 28px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+body{
+  font-family:"Poppins",system-ui,Segoe UI,Roboto,Arial;
+  background:
+    radial-gradient(900px 450px at -10% -10%, #ffe5ec 0, transparent 60%),
+    radial-gradient(900px 450px at 110% 0%, #ffe9f1 0, transparent 60%),
+    linear-gradient(#fff,#fff9fb 30%, #ffeef3);
+  color:#3b2a2a;
+}
+a{text-decoration:none}
+.navbar{
+  background:linear-gradient(90deg,var(--pink),var(--rose));
+  box-shadow:var(--shadow);
+}
+.navbar .navbar-brand,.navbar .nav-link{color:#fff!important;font-weight:600}
+.navbar .nav-link:hover{background-color: rgb(0, 0, 0);}
+
+/* Hero */
+.hero{
+  position:relative; min-height:88vh; display:grid; place-items:center; text-align:center; overflow:hidden;
+  color:#5b2f2f;
+  background:
+    radial-gradient(1200px 600px at 120% 0%, rgba(255,255,255,.65) 0, transparent 60%),
+    linear-gradient(180deg, rgba(255,143,171,.35), rgba(255,143,171,.05)),
+    url('https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+}
+.hero h1{font-weight:800; letter-spacing:.4px; text-shadow:0 10px 30px rgba(0,0,0,.18)}
+.hero .lead{opacity:.95}
+.hero-btn{
+  background:linear-gradient(90deg,var(--pink),var(--rose));
+  color:#fff; border:0; padding:.9rem 1.4rem; border-radius:999px; box-shadow:0 10px 22px rgba(255,111,145,.35);
+}
+.hero::after{
+  content:""; position:absolute; left:0; right:0; bottom:-1px; height:70px;
+  background:url('data:image/svg+xml;utf8,<svg width="1200" height="120" xmlns="http://www.w3.org/2000/svg"><path d="M0,60 C150,120 350,0 600,60 C850,120 1050,0 1200,60 L1200,120 L0,120 Z" fill="%23fff5f7"/></svg>') center/cover no-repeat;
+}
+
+/* Section titles */
+.section-title{color:var(--choc); font-weight:800}
+
+/* Cards */
+.sprinkle-card{
+  border:0; border-radius:20px; overflow:hidden; box-shadow:var(--shadow); background:#fff;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.sprinkle-card:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,.12)}
+.sprinkle-card img{height:220px; object-fit:cover}
+.price{color:var(--pink); font-weight:800}
+
+/* Ribbons */
+.ribbon{
+  position:absolute; top:16px; left:-8px; background:var(--gold); color:#7a4a00; font-weight:700; padding:6px 14px; border-radius:0 10px 10px 0;
+  box-shadow:0 6px 16px rgba(0,0,0,.1);
+}
+
+/* Offer strip */
+.offer{
+  background:linear-gradient(90deg,#ffe2ea,#fff5f7); border-radius:22px; box-shadow:var(--shadow);
+}
+
+/* Footer */
+footer{background:#3a2323; color:#fbeff1}
+footer a{color:#ffd7df}
+footer a:hover{text-decoration:underline}
+
+/* Media queries */
+@media (max-width:1199.98px){ .hero{min-height:76vh} }
+@media (max-width:991.98px){
+  .hero h1{font-size:2.2rem}
+  .sprinkle-card img{height:200px}
+}
+@media (max-width:767.98px){
+  .hero{min-height:64vh; padding:64px 0}
+  .hero .lead{font-size:1rem}
+}
+@media (max-width:575.98px){
+  .hero h1{font-size:1.8rem}
+  .sprinkle-card{border-radius:16px}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">The Cake Shop</a>
+    <button class="navbar-toggler bg-light-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container" data-aos="fade-up">
+    <h1 class="display-4 mb-2">Freshly Baked Happiness, Daily 🍰</h1>
+    <p class="lead mb-3">From velvety cheesecakes to playful cupcakes — taste joy in every bite.</p>
+    <a href="menu.html" class="btn hero-btn btn-lg">Explore Menu</a>
+  </div>
+</header>
+
+<main>
+  <!-- Best Sellers -->
+  <section class="container py-5">
+    <h2 class="section-title text-center mb-4" data-aos="fade-up">Best Sellers</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="sprinkle-card position-relative h-100">
+          <span class="ribbon">Hot</span>
+          <img class="w-100" src="Assets/photos/Chocolate Truffle.jpg" alt="Chocolate Truffle">
+          <div class="p-3">
+            <h5 class="fw-bold mb-1">Chocolate Truffle</h5>
+            <p class="small text-muted mb-2">Silky ganache & moist layers.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">₹499</span>
+              <a href="products.html" class="btn btn-sm btn-outline-danger">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="sprinkle-card h-100">
+          <img class="w-100" src="Assets/photos/Strawberry Shortcake.jpg" alt="Strawberry Shortcake">
+          <div class="p-3">
+            <h5 class="fw-bold mb-1">Strawberry Shortcake</h5>
+            <p class="small text-muted mb-2">Whipped cream & fresh berries.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">₹549</span>
+              <a href="products.html" class="btn btn-sm btn-outline-danger">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="sprinkle-card h-100">
+          <img class="w-100" src="Assets/photos/Biscoff Cheesecake.jpg" alt="Biscoff Cheesecake">
+          <div class="p-3">
+            <h5 class="fw-bold mb-1">Biscoff Cheesecake</h5>
+            <p class="small text-muted mb-2">Cookie butter dream.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">₹599</span>
+              <a href="products.html" class="btn btn-sm btn-outline-danger">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offer -->
+  <section class="container pb-5">
+    <div class="offer p-4 p-md-5 text-center" data-aos="zoom-in">
+      <h3 class="fw-bold mb-2" style="color:var(--choc)">Weekend Delight: Buy 2 Cupcakes, Get 1 Free 🎉</h3>
+      <p class="mb-3">Valid Sat–Sun, in-store & online.</p>
+      <a href="products.html" class="btn btn-danger">Shop Now</a>
+    </div>
+  </section>
+</main>
+
+<footer class="pt-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h5 class="text-white">The Cake Shop</h5>
+        <p class="mb-2">Small-batch cakes, crafted daily with real butter & love.</p>
+        <p class="small mb-0">Open: Mon–Sun, 9 AM – 9 PM</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <h6 class="text-white">Links</h6>
+        <ul class="list-unstyled mb-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="cart.html">Your Cart</a></li>
+          <li><a href="login.html">Account</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-3">
+        <h6 class="text-white">Visit</h6>
+        <p class="mb-1">89, Patti Street, Sivakasi City</p>
+        <p class="mb-1">+91 9500781257</p>
+        <p class="mb-0">abisheikj2703@gmail.com</p>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-white">Subscribe</h6>
+        <form class="d-flex gap-2">
+          <input type="email" class="form-control form-control-sm" placeholder="Your email">
+          <button class="btn btn-sm btn-light">Join</button>
+        </form>
+      </div>
+    </div>
+    <hr class="border-light-subtle mt-4"/>
+    <p class="text-center small mb-0">© 2025 The Cake Shop Cake Shop · All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration:1000, once:true});</script>
+</body>
+</html>

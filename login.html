@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Cake Shop — Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<style>
+:root{--pink:#ff6f91;--rose:#ff8fab;--cream:#fff5f7;--shadow:0 12px 28px rgba(0,0,0,.08);}
+body{font-family:"Poppins",system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(#fff,#fff9fb 40%, #ffeef3)}
+.navbar{background:linear-gradient(90deg,var(--pink),var(--rose)); box-shadow:var(--shadow)}
+.navbar .nav-link,.navbar .navbar-brand{color:#fff!important; font-weight:600}
+.navbar .nav-link:hover{background-color: black;}
+.wrapper{min-height:80vh; display:grid; place-items:center}
+.card-auth{border:0; border-radius:22px; box-shadow:var(--shadow); overflow:hidden}
+.auth-left{background:linear-gradient(180deg, rgba(255,111,145,.25), rgba(255,143,171,.15));}
+.btn-cream{background:linear-gradient(90deg,var(--pink),var(--rose)); color:#fff; border:0}
+footer{background:#3a2323; color:#fbeff1}
+footer a{ text-decoration: none; color:#ffd7df}
+footer a:hover{text-decoration:underline}
+@media (max-width:575.98px){ .card-auth{border-radius:16px}}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">The Cake Shop</a>
+    <button class="navbar-toggler bg-light-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-semibold" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="wrapper container py-5">
+  <div class="row g-0 card-auth" data-aos="zoom-in">
+    <div class="col-md-6 p-4 p-lg-5 auth-left">
+      <h3 class="fw-bold">Welcome Back!</h3>
+      <p class="text-muted">Log in to track orders and save favorites.</p>
+      <form>
+        <div class="mb-3"><label class="form-label">Email</label><input type="email" class="form-control" placeholder="you@example.com" required></div>
+        <div class="mb-3"><label class="form-label">Password</label><input type="password" class="form-control" placeholder="••••••••" required></div>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="remember"><label class="form-check-label" for="remember">Remember me</label></div>
+          <a href="#" class="small">Forgot password?</a>
+        </div>
+        <button class="btn btn-cream w-100 mt-3">Login</button>
+      </form>
+    </div>
+    <div class="col-md-6 p-4 p-lg-5 bg-white">
+      <h3 class="fw-bold">New Here?</h3>
+      <p class="text-muted">Create an account for faster checkout & sweet deals.</p>
+      <form>
+        <div class="mb-3"><label class="form-label">Name</label><input type="text" class="form-control" placeholder="Your name" required></div>
+        <div class="mb-3"><label class="form-label">Email</label><input type="email" class="form-control" placeholder="you@example.com" required></div>
+        <div class="mb-3"><label class="form-label">Password</label><input type="password" class="form-control" placeholder="At least 8 characters" required></div>
+        <button class="btn btn-cream w-100">Create Account</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="pt-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h5 class="text-white">The Cake Shop</h5>
+        <p class="mb-2">Small-batch cakes, crafted daily with real butter & love.</p>
+        <p class="small mb-0">Open: Mon–Sun, 9 AM – 9 PM</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <h6 class="text-white">Links</h6>
+        <ul class="list-unstyled mb-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="cart.html">Your Cart</a></li>
+          <li><a href="login.html">Account</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-3">
+        <h6 class="text-white">Visit</h6>
+        <p class="mb-1">89, Patti Street, Sivakasi City</p>
+        <p class="mb-1">+91 9500781257</p>
+        <p class="mb-0">abisheikj2703@gmail.com</p>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-white">Subscribe</h6>
+        <form class="d-flex gap-2">
+          <input type="email" class="form-control form-control-sm" placeholder="Your email">
+          <button class="btn btn-sm btn-light">Join</button>
+        </form>
+      </div>
+    </div>
+    <hr class="border-light-subtle mt-4"/>
+    <p class="text-center small mb-0">© 2025 The Cake Shop Cake Shop · All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration:900, once:true});</script>
+</body>
+</html>
